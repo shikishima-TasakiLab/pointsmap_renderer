@@ -1,0 +1,14 @@
+<launch>
+  <node name="vgm_pub" pkg="pointsmap_renderer" type="voxelgridmap_publisher_node" output="screen">
+    <!-- <rosparam command="load" file="$(find pointsmap_renderer)/config/sample.yaml"/> -->
+    <param name="voxel_size" value="0.2" />
+  </node>
+  <node name="pointsmap_renderer" pkg="pointsmap_renderer" type="pointsmap_renderer_node">
+    <param name="hz" value="5" />
+    <param name="queue_size" value="2" />
+    <param name="depth_min" value="1.0" />
+    <param name="depth_max" value="10.0" />
+    <remap from="~/camera_info" to="/pmod/sparse_depth/camera_info" />
+    <remap from="~/sparse_depth" to="/pmod/sparse_depth" />
+  </node>
+</launch>

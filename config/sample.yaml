@@ -1,0 +1,4 @@
+voxel_size: 1.0
+map_frameid: map
+init_maps:
+  - /workspace/src/pointsmap_renderer/SYNTHIA-MAP.pcd

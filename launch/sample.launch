@@ -1,0 +1,23 @@
+<launch>
+  <node name="vgm_pub" pkg="pointsmap_renderer" type="voxelgridmap_publisher_node" output="screen">
+    <!-- <rosparam command="load" file="$(find pointsmap_renderer)/config/sample.yaml"/> -->
+  </node>
+  <node name="iteration1" pkg="pointsmap_renderer" type="pointsmap_renderer_node">
+    <param name="hz" value="5" />
+    <param name="queue_size" value="2" />
+    <param name="depth_min" value="1.0" />
+    <param name="depth_max" value="80.0" />
+  </node>
+  <node name="iteration2" pkg="pointsmap_renderer" type="pointsmap_renderer_node">
+    <param name="hz" value="5" />
+    <param name="queue_size" value="2" />
+    <param name="depth_min" value="1.0" />
+    <param name="depth_max" value="80.0" />
+  </node>
+  <node name="iteration3" pkg="pointsmap_renderer" type="pointsmap_renderer_node">
+    <param name="hz" value="5" />
+    <param name="queue_size" value="2" />
+    <param name="depth_min" value="1.0" />
+    <param name="depth_max" value="80.0" />
+  </node>
+</launch>
