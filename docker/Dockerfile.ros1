@@ -8,8 +8,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ros-${DISTRO}-pcl-conversions \
         ros-${DISTRO}-cv-bridge \
-        ros-melodic-tf2-ros \
-        ros-melodic-tf2-eigen \
+        ros-${DISTRO}-tf2-ros \
+        ros-${DISTRO}-tf2-eigen \
         python-catkin-tools && \
     rm -rf /var/lib/apt/lists/*
 
