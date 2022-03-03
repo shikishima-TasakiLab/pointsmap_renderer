@@ -9,8 +9,8 @@
 #include "pointsmap_renderer/VoxelGridMap.h"
 
 #ifdef _OPENMP
-#endif
 #include <omp.h>
+#endif
 
 #define DEFAULT_VOXEL_SIZE 10.0F
 
