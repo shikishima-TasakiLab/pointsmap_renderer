@@ -3,13 +3,12 @@ FROM ros:${DISTRO}-ros-base
 
 SHELL ["/bin/bash", "-c"]
 
-ARG DISTRO
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        ros-${DISTRO}-pcl-conversions \
-        ros-${DISTRO}-cv-bridge \
-        ros-${DISTRO}-tf2-ros \
-        ros-${DISTRO}-tf2-eigen \
+        ros-${ROS_DISTRO}-pcl-conversions \
+        ros-${ROS_DISTRO}-cv-bridge \
+        ros-${ROS_DISTRO}-tf2-ros \
+        ros-${ROS_DISTRO}-tf2-eigen \
         python-catkin-tools && \
     rm -rf /var/lib/apt/lists/*
 
